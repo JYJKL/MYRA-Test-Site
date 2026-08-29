@@ -17,27 +17,39 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Estilo Pro alternative (Cinzel & Poiret One) paired with Plus Jakarta Sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&family=Poiret+One&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
-    h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
+    
+    /* Estilo Pro Styling Approximation */
+    .font-estilo { 
+      font-family: 'Cinzel', serif; 
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .font-estilo-alt {
+      font-family: 'Poiret One', cursive;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
   </style>
 </head>
 <body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-setting-plaster selection:text-neutral-950">
 
   <!-- Header / Navigation -->
-  <header class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/50">
+  <header class="fixed top-0 w-full z-50 bg-neutral-950/90 backdrop-blur-md border-b border-neutral-800/50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-      <a href="#" class="text-xl tracking-widest font-semibold uppercase text-neutral-100">
-        M.Y.R.A. <span class="text-xs tracking-normal block text-neutral-400 font-normal">ENTERTAINMENT</span>
+      <a href="#" class="font-estilo text-xl font-semibold tracking-widest text-neutral-100">
+        M.Y.R.A. <span class="text-[10px] tracking-widest block text-setting-plaster font-normal mt-0.5">Movement &bull; Youth &bull; Resources &bull; Art</span>
       </a>
-      <nav class="hidden md:flex space-x-8 text-sm font-light tracking-wider text-neutral-300">
+      <nav class="hidden md:flex space-x-8 text-xs font-light tracking-[0.2em] text-neutral-300">
         <a href="#films" class="hover:text-setting-plaster transition-colors">FILMS</a>
         <a href="#mission" class="hover:text-setting-plaster transition-colors">MISSION</a>
-        <a href="#initiative" class="hover:text-setting-plaster transition-colors">INITIATIVE</a>
+        <a href="#initiatives" class="hover:text-setting-plaster transition-colors">INITIATIVES</a>
         <a href="#about" class="hover:text-setting-plaster transition-colors">ABOUT</a>
       </nav>
-      <div class="text-xs tracking-widest text-neutral-400 border border-neutral-800 rounded-full px-4 py-2">
+      <div class="text-[11px] font-estilo text-neutral-400 border border-neutral-800 rounded-full px-4 py-1.5 tracking-widest">
         NYC &bull; LDN &bull; SGP
       </div>
     </div>
@@ -45,18 +57,18 @@
 
   <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
-    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/50 to-transparent z-10"></div>
-    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTfX5swUfzrbFyslCl8OlKBT9PDE1Fcay9iqzqSNty399PmcKbBupVhgDhsbn9K_CtWl-HM3BQOroe57mU" alt="Cinema theater backdrop" class="absolute inset-0 w-full h-full object-cover opacity-35">
+    <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/60 to-transparent z-10"></div>
+    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcTfX5swUfzrbFyslCl8OlKBT9PDE1Fcay9iqzqSNty399PmcKbBupVhgDhsbn9K_CtWl-HM3BQOroe57mU" alt="Cinema theater background" class="absolute inset-0 w-full h-full object-cover opacity-30">
     
-    <div class="relative z-20 max-w-4xl mx-auto text-center px-6">
-      <span class="text-setting-plaster text-sm tracking-[0.3em] uppercase block mb-4">Movement &bull; Youth &bull; Resources &bull; Art</span>
-      <h1 class="text-4xl md:text-6xl lg:text-7xl font-normal leading-tight mb-6">
+    <div class="relative z-20 max-w-5xl mx-auto text-center px-6">
+      <span class="text-setting-plaster text-xs tracking-[0.35em] uppercase font-estilo block mb-4">Established 2007</span>
+      <h1 class="font-estilo text-4xl md:text-6xl lg:text-7xl font-light leading-tight mb-6 tracking-wider">
         The Camera Knows No Flag.
       </h1>
-      <p class="text-lg md:text-xl text-neutral-300 font-light max-w-2xl mx-auto mb-8">
-        Advancing global cross-cultural understanding through nonviolent, humanistic, and inclusive cinema.
+      <p class="text-base md:text-lg text-neutral-300 font-light max-w-2xl mx-auto mb-8 leading-relaxed">
+        Advancing understanding across countries and cultures through nonviolent, humanistic, and inclusive motion pictures.
       </p>
-      <a href="#films" class="inline-block bg-red-earth text-neutral-100 font-medium px-8 py-3.5 text-sm tracking-widest uppercase hover:bg-setting-plaster hover:text-neutral-950 transition-colors">
+      <a href="#films" class="inline-block bg-red-earth text-neutral-100 font-estilo text-xs px-8 py-4 tracking-[0.25em] hover:bg-setting-plaster hover:text-neutral-950 transition-colors">
         Explore Slate
       </a>
     </div>
@@ -64,89 +76,157 @@
 
   <!-- Featured Filmography -->
   <section id="films" class="py-24 max-w-7xl mx-auto px-6">
-    <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
       <div>
-        <h2 class="text-xs uppercase tracking-[0.2em] text-setting-plaster mb-2">Selected Works</h2>
-        <h3 class="text-3xl md:text-4xl">Feature Films & Projects</h3>
+        <h2 class="text-xs font-estilo text-setting-plaster mb-2 tracking-[0.25em]">Selected Works</h2>
+        <h3 class="font-estilo text-3xl md:text-4xl text-neutral-100">Motion Pictures & Shorts</h3>
       </div>
-      <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0">
-        Award-winning motion pictures celebrated for emotional depth, rich language, and responsible storytelling.
+      <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0 font-light leading-relaxed">
+        Award-winning features celebrated for rich language, emotional depth, and stories free from graphic violence.
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <!-- Film Card 1: Freud's Last Session -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Film 1: Freud's Last Session -->
       <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden bg-neutral-950">
-          <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRgPPvtgBXYcn3kVAROX_6y6xX5fjkNFX5LfQ3VORFoEF9hCjziWAtQlgCWZaMTvk_O1wHAPuH_nzgvh1Y" alt="Freud's Last Session Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcRgPPvtgBXYcn3kVAROX_6y6xX5fjkNFX5LfQ3VORFoEF9hCjziWAtQlgCWZaMTvk_O1wHAPuH_nzgvh1Y" alt="Freud's Last Session Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
-        <div class="p-6">
-          <span class="text-xs text-setting-plaster tracking-wider uppercase">Feature Narrative</span>
-          <h4 class="text-xl font-semibold mt-1">Freud's Last Session</h4>
-          <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
+        <div class="p-5">
+          <span class="text-[10px] text-setting-plaster font-estilo tracking-widest block mb-1">Feature Narrative</span>
+          <h4 class="font-estilo text-lg text-neutral-100">Freud's Last Session</h4>
+          <p class="text-xs text-neutral-400 mt-2 font-light">Executive Produced by M.Y.R.A.</p>
         </div>
       </div>
 
-      <!-- Film Card 2: Call Me By Your Name -->
+      <!-- Film 2: Call Me By Your Name -->
       <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden bg-neutral-950">
-          <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcS24Q37buT0r-cgMBFVkMBKqqrATG9JNQba319rW-P7jw-q8IFS0SzAcgUk8tqiA6OrDJqx3-eEz1nMDDU" alt="Call Me By Your Name Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <img src="https://encrypted-tbn1.gstatic.com/licensed-image?q=tbn:ANd9GcS24Q37buT0r-cgMBFVkMBKqqrATG9JNQba319rW-P7jw-q8IFS0SzAcgUk8tqiA6OrDJqx3-eEz1nMDDU" alt="Call Me By Your Name Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
-        <div class="p-6">
-          <span class="text-xs text-setting-plaster tracking-wider uppercase">Academy Award Winner</span>
-          <h4 class="text-xl font-semibold mt-1">Call Me By Your Name</h4>
-          <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
+        <div class="p-5">
+          <span class="text-[10px] text-setting-plaster font-estilo tracking-widest block mb-1">Academy Award Winner</span>
+          <h4 class="font-estilo text-lg text-neutral-100">Call Me By Your Name</h4>
+          <p class="text-xs text-neutral-400 mt-2 font-light">Executive Produced by M.Y.R.A.</p>
         </div>
       </div>
 
-      <!-- Film Card 3: The World to Come -->
+      <!-- Film 3: The World to Come -->
       <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden bg-neutral-950">
-          <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcS5qb3fubThFb_vpGtgcI6dwPPBsi9qKmP1PZrYpdr11Ft4huoK5RdiXYJXv1nKppEE4qFG-FuvOWLdSFw" alt="The World to Come Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90 group-hover:opacity-100">
+          <img src="https://encrypted-tbn3.gstatic.com/licensed-image?q=tbn:ANd9GcS5qb3fubThFb_vpGtgcI6dwPPBsi9qKmP1PZrYpdr11Ft4huoK5RdiXYJXv1nKppEE4qFG-FuvOWLdSFw" alt="The World to Come Poster" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
-        <div class="p-6">
-          <span class="text-xs text-setting-plaster tracking-wider uppercase">Venice Film Festival Winner</span>
-          <h4 class="text-xl font-semibold mt-1">The World to Come</h4>
-          <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
+        <div class="p-5">
+          <span class="text-[10px] text-setting-plaster font-estilo tracking-widest block mb-1">Venice Winner</span>
+          <h4 class="font-estilo text-lg text-neutral-100">The World to Come</h4>
+          <p class="text-xs text-neutral-400 mt-2 font-light">Executive Produced by M.Y.R.A.</p>
+        </div>
+      </div>
+
+      <!-- Film 4: Benediction -->
+      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
+        <div class="aspect-[2/3] overflow-hidden bg-neutral-950 flex items-center justify-center p-6 text-center">
+          <div>
+            <span class="font-estilo text-lg text-neutral-200">Benediction</span>
+            <span class="block text-xs text-neutral-500 font-light mt-2">Directed by Terence Davies</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <span class="text-[10px] text-setting-plaster font-estilo tracking-widest block mb-1">Feature Narrative</span>
+          <h4 class="font-estilo text-lg text-neutral-100">Benediction</h4>
+          <p class="text-xs text-neutral-400 mt-2 font-light">Produced by M.Y.R.A.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Core Pillars -->
-  <section id="mission" class="py-24 bg-neutral-900/50 border-y border-neutral-800">
+  <!-- Core Mission & Values -->
+  <section id="mission" class="py-24 bg-neutral-900/40 border-y border-neutral-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="max-w-2xl mb-16">
-        <h2 class="text-xs uppercase tracking-[0.2em] text-setting-plaster mb-2">Our Mission</h2>
-        <h3 class="text-3xl md:text-4xl">Responsible Storytelling</h3>
+        <h2 class="text-xs font-estilo text-setting-plaster mb-2 tracking-[0.25em]">Our Philosophy</h2>
+        <h3 class="font-estilo text-3xl md:text-4xl text-neutral-100">Responsible Storytelling</h3>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
         <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
-          <h4 class="text-lg font-medium mb-2">Global Outlook</h4>
-          <p class="text-sm text-neutral-400 font-light leading-relaxed">Operating seamlessly across New York, London, and Singapore to elevate worldwide cinema.</p>
+          <h4 class="font-estilo text-base mb-2 text-neutral-100">Global Outlook</h4>
+          <p class="text-sm text-neutral-400 font-light leading-relaxed">Operating in New York, London, and Singapore to connect stories across borders.</p>
         </div>
         <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
-          <h4 class="text-lg font-medium mb-2">Nonviolent Content</h4>
-          <p class="text-sm text-neutral-400 font-light leading-relaxed">Prioritizing narrative tension and emotional intelligence over graphic violence.</p>
+          <h4 class="font-estilo text-base mb-2 text-neutral-100">Nonviolent Cinema</h4>
+          <p class="text-sm text-neutral-400 font-light leading-relaxed">Prioritizing emotional resonance over graphic or verbal violence in service of mental well-being.</p>
         </div>
         <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
-          <h4 class="text-lg font-medium mb-2">Human Diversity</h4>
-          <p class="text-sm text-neutral-400 font-light leading-relaxed">Celebrating diverse voices, cultures, and multi-generational perspectives.</p>
+          <h4 class="font-estilo text-base mb-2 text-neutral-100">Human Diversity</h4>
+          <p class="text-sm text-neutral-400 font-light leading-relaxed">Celebrating polyglot, diverse voices and multi-generational perspectives worldwide.</p>
         </div>
         <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
-          <h4 class="text-lg font-medium mb-2">Impact Initiatives</h4>
-          <p class="text-sm text-neutral-400 font-light leading-relaxed">Supporting environmental stewardship, youth initiatives, and documentary film funds.</p>
+          <h4 class="font-estilo text-base mb-2 text-neutral-100">All Generations</h4>
+          <p class="text-sm text-neutral-400 font-light leading-relaxed">Creating timeless works shaped by focus groups spanning Gen-Z, Gen-Alpha, and beyond.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Special Initiatives -->
+  <section id="initiatives" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="max-w-2xl mb-16">
+      <h2 class="text-xs font-estilo text-setting-plaster mb-2 tracking-[0.25em]">Philanthropy & Grants</h2>
+      <h3 class="font-estilo text-3xl md:text-4xl text-neutral-100">M.Y.R.A. Initiatives</h3>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-sm">
+        <span class="text-xs font-estilo text-red-earth tracking-widest block mb-2">Philanthropic Division</span>
+        <h4 class="font-estilo text-2xl mb-4 text-neutral-100">The M.Y.R.A. Initiative</h4>
+        <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6">
+          Supporting children's welfare and environmental conservation while advocating for nonviolent storytelling in media. Includes emergency relief funds and cultural outreach.
+        </p>
+      </div>
+
+      <div class="bg-neutral-900 border border-neutral-800 p-8 rounded-sm">
+        <span class="text-xs font-estilo text-red-earth tracking-widest block mb-2">Filmmaker Grant</span>
+        <h4 class="font-estilo text-2xl mb-4 text-neutral-100">Documentary Film Fund</h4>
+        <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6">
+          Inviting filmmakers to showcase real-life stories that preserve cultural legacies, fuel cross-cultural knowledge, and promote environmental stewardship.
+        </p>
+        <span class="text-xs font-estilo text-neutral-500 uppercase tracking-widest">Submissions by Invitation Only</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Founder / Leadership Section -->
+  <section id="about" class="py-24 bg-neutral-900/40 border-t border-neutral-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-5">
+          <div class="border border-neutral-800 p-2">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80" alt="Margarethe Baillou" class="w-full h-auto grayscale contrast-125 opacity-90">
+          </div>
+        </div>
+        <div class="md:col-span-7">
+          <h2 class="text-xs font-estilo text-setting-plaster mb-2 tracking-[0.25em]">Leadership</h2>
+          <h3 class="font-estilo text-3xl md:text-4xl text-neutral-100 mb-6">Margarethe Baillou</h3>
+          <p class="text-sm text-neutral-300 font-light leading-relaxed mb-4">
+            M.Y.R.A.'s founder, Margarethe Baillou, has lived across Europe, the Americas, and Asia, studying diverse cultures and the natural world.
+          </p>
+          <p class="text-sm text-neutral-400 font-light leading-relaxed mb-6">
+            With a firm belief in cinema’s capacity to win the race against time, she leads a polyglot, multicultural team dedicated to crafting humanistic, inclusive cinema free from graphic violence.
+          </p>
+          <div class="border-l-2 border-red-earth pl-4 py-1">
+            <p class="font-estilo text-xs text-neutral-300 tracking-wider">"Film has a profound impact on society—we choose to use that power to unite."</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-12 border-t border-neutral-800 text-xs text-neutral-500">
+  <footer class="py-12 border-t border-neutral-800 text-xs text-neutral-500 font-light">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <p>&copy; 2026 M.Y.R.A. Entertainment, LLC. All rights reserved.</p>
-      <div class="flex space-x-6">
+      <p class="font-estilo tracking-wider">&copy; 2026 M.Y.R.A. Entertainment, LLC. All rights reserved.</p>
+      <div class="flex space-x-6 font-estilo tracking-widest">
         <a href="#" class="hover:text-setting-plaster transition-colors">Privacy Policy</a>
         <a href="#" class="hover:text-setting-plaster transition-colors">Terms of Use</a>
         <a href="#" class="hover:text-setting-plaster transition-colors">Contact</a>
