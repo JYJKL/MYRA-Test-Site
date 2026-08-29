@@ -5,24 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.Y.R.A. Entertainment | Responsible Storytelling</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'red-earth': '#A35443',      /* Farrow & Ball No. 64 */
+            'setting-plaster': '#E1A492' /* Farrow & Ball No. 231 */
+          }
+        }
+      }
+    }
+  </script>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; }
     h1, h2, h3, .serif { font-family: 'Playfair Display', serif; }
   </style>
 </head>
-<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-amber-500 selection:text-black">
+<body class="bg-neutral-950 text-neutral-100 antialiased selection:bg-setting-plaster selection:text-neutral-950">
 
+  <!-- Header / Navigation -->
   <header class="fixed top-0 w-full z-50 bg-neutral-950/80 backdrop-blur-md border-b border-neutral-800/50">
     <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
       <a href="#" class="text-xl tracking-widest font-semibold uppercase text-neutral-100">
         M.Y.R.A. <span class="text-xs tracking-normal block text-neutral-400 font-normal">ENTERTAINMENT</span>
       </a>
       <nav class="hidden md:flex space-x-8 text-sm font-light tracking-wider text-neutral-300">
-        <a href="#films" class="hover:text-amber-400 transition-colors">FILMS</a>
-        <a href="#mission" class="hover:text-amber-400 transition-colors">MISSION</a>
-        <a href="#initiative" class="hover:text-amber-400 transition-colors">INITIATIVE</a>
-        <a href="#about" class="hover:text-amber-400 transition-colors">ABOUT</a>
+        <a href="#films" class="hover:text-setting-plaster transition-colors">FILMS</a>
+        <a href="#mission" class="hover:text-setting-plaster transition-colors">MISSION</a>
+        <a href="#initiative" class="hover:text-setting-plaster transition-colors">INITIATIVE</a>
+        <a href="#about" class="hover:text-setting-plaster transition-colors">ABOUT</a>
       </nav>
       <div class="text-xs tracking-widest text-neutral-400 border border-neutral-800 rounded-full px-4 py-2">
         NYC &bull; LDN &bull; SGP
@@ -30,28 +43,30 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
     <div class="absolute inset-0 bg-gradient-to-t from-neutral-950 via-neutral-950/40 to-transparent z-10"></div>
-    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80" alt="Cinema background" class="absolute inset-0 w-full h-full object-cover opacity-30">
+    <img src="https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&q=80" alt="Cinema background" class="absolute inset-0 w-full h-full object-cover opacity-25">
     
     <div class="relative z-20 max-w-4xl mx-auto text-center px-6">
-      <span class="text-amber-400/90 text-sm tracking-[0.3em] uppercase block mb-4">Movement &bull; Youth &bull; Resources &bull; Art</span>
+      <span class="text-setting-plaster text-sm tracking-[0.3em] uppercase block mb-4">Movement &bull; Youth &bull; Resources &bull; Art</span>
       <h1 class="text-4xl md:text-6xl lg:text-7xl font-normal leading-tight mb-6">
         The Camera Knows No Flag.
       </h1>
       <p class="text-lg md:text-xl text-neutral-300 font-light max-w-2xl mx-auto mb-8">
         Advancing global cross-cultural understanding through nonviolent, humanistic, and inclusive cinema.
       </p>
-      <a href="#films" class="inline-block bg-neutral-100 text-neutral-950 font-medium px-8 py-3.5 text-sm tracking-widest uppercase hover:bg-amber-400 transition-colors">
+      <a href="#films" class="inline-block bg-red-earth text-neutral-100 font-medium px-8 py-3.5 text-sm tracking-widest uppercase hover:bg-setting-plaster hover:text-neutral-950 transition-colors">
         Explore Slate
       </a>
     </div>
   </section>
 
+  <!-- Featured Filmography -->
   <section id="films" class="py-24 max-w-7xl mx-auto px-6">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
-        <h2 class="text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Selected Works</h2>
+        <h2 class="text-xs uppercase tracking-[0.2em] text-setting-plaster mb-2">Selected Works</h2>
         <h3 class="text-3xl md:text-4xl">Feature Films & Projects</h3>
       </div>
       <p class="text-neutral-400 text-sm max-w-md mt-4 md:mt-0">
@@ -60,34 +75,37 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm">
+      <!-- Film Card 1 -->
+      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden">
           <img src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?auto=format&fit=crop&q=80" alt="Freud's Last Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
         </div>
         <div class="p-6">
-          <span class="text-xs text-amber-400 tracking-wider uppercase">Feature Narrative</span>
+          <span class="text-xs text-setting-plaster tracking-wider uppercase">Feature Narrative</span>
           <h4 class="text-xl font-semibold mt-1">Freud's Last Session</h4>
           <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
         </div>
       </div>
 
-      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm">
+      <!-- Film Card 2 -->
+      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden">
           <img src="https://images.unsplash.com/photo-1518676599626-fcd87d565b1e?auto=format&fit=crop&q=80" alt="Call Me By Your Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
         </div>
         <div class="p-6">
-          <span class="text-xs text-amber-400 tracking-wider uppercase">Academy Award Winner</span>
+          <span class="text-xs text-setting-plaster tracking-wider uppercase">Academy Award Winner</span>
           <h4 class="text-xl font-semibold mt-1">Call Me By Your Name</h4>
           <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
         </div>
       </div>
 
-      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm">
+      <!-- Film Card 3 -->
+      <div class="group relative overflow-hidden bg-neutral-900 border border-neutral-800 rounded-sm hover:border-red-earth/50 transition-colors">
         <div class="aspect-[2/3] overflow-hidden">
           <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?auto=format&fit=crop&q=80" alt="The World to Come" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100">
         </div>
         <div class="p-6">
-          <span class="text-xs text-amber-400 tracking-wider uppercase">Venice Film Festival Winner</span>
+          <span class="text-xs text-setting-plaster tracking-wider uppercase">Venice Film Festival Winner</span>
           <h4 class="text-xl font-semibold mt-1">The World to Come</h4>
           <p class="text-xs text-neutral-400 mt-2">Executive Produced by M.Y.R.A. Entertainment</p>
         </div>
@@ -95,27 +113,28 @@
     </div>
   </section>
 
+  <!-- Core Pillars -->
   <section id="mission" class="py-24 bg-neutral-900/50 border-y border-neutral-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="max-w-2xl mb-16">
-        <h2 class="text-xs uppercase tracking-[0.2em] text-amber-400 mb-2">Our Mission</h2>
+        <h2 class="text-xs uppercase tracking-[0.2em] text-setting-plaster mb-2">Our Mission</h2>
         <h3 class="text-3xl md:text-4xl">Responsible Storytelling</h3>
       </div>
       
       <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="p-6 border-l border-neutral-800">
+        <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
           <h4 class="text-lg font-medium mb-2">Global Outlook</h4>
           <p class="text-sm text-neutral-400 font-light leading-relaxed">Operating seamlessly across New York, London, and Singapore to elevate worldwide cinema.</p>
         </div>
-        <div class="p-6 border-l border-neutral-800">
+        <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
           <h4 class="text-lg font-medium mb-2">Nonviolent Content</h4>
           <p class="text-sm text-neutral-400 font-light leading-relaxed">Prioritizing narrative tension and emotional intelligence over graphic violence.</p>
         </div>
-        <div class="p-6 border-l border-neutral-800">
+        <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
           <h4 class="text-lg font-medium mb-2">Human Diversity</h4>
           <p class="text-sm text-neutral-400 font-light leading-relaxed">Celebrating diverse voices, cultures, and multi-generational perspectives.</p>
         </div>
-        <div class="p-6 border-l border-neutral-800">
+        <div class="p-6 border-l border-red-earth/40 hover:border-red-earth transition-colors">
           <h4 class="text-lg font-medium mb-2">Impact Initiatives</h4>
           <p class="text-sm text-neutral-400 font-light leading-relaxed">Supporting environmental stewardship, youth initiatives, and documentary film funds.</p>
         </div>
@@ -123,13 +142,14 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer class="py-12 border-t border-neutral-800 text-xs text-neutral-500">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p>&copy; 2026 M.Y.R.A. Entertainment, LLC. All rights reserved.</p>
       <div class="flex space-x-6">
-        <a href="#" class="hover:text-neutral-300">Privacy Policy</a>
-        <a href="#" class="hover:text-neutral-300">Terms of Use</a>
-        <a href="#" class="hover:text-neutral-300">Contact</a>
+        <a href="#" class="hover:text-setting-plaster transition-colors">Privacy Policy</a>
+        <a href="#" class="hover:text-setting-plaster transition-colors">Terms of Use</a>
+        <a href="#" class="hover:text-setting-plaster transition-colors">Contact</a>
       </div>
     </div>
   </footer>
