@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.Y.R.A. Entertainment | Responsible Storytelling</title>
   
-  <!-- Font CDN Preconnect for Faster Loading -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -24,13 +23,39 @@
       }
     }
   </script>
+  
   <style>
-    body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
+    /* Estilo Pro Local Font Declarations */
+    @font-face {
+      font-family: 'Estilo Pro';
+      src: url('assets/fonts/EstiloPro-Regular.woff2') format('woff2'),
+           url('assets/fonts/EstiloPro-Regular.otf') format('opentype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Estilo Pro';
+      src: url('assets/fonts/EstiloPro-Bold.woff2') format('woff2'),
+           url('assets/fonts/EstiloPro-Bold.otf') format('opentype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    body { 
+      font-family: 'Plus Jakarta Sans', sans-serif; 
+      transition: background-color 0.3s ease, color 0.3s ease; 
+    }
+
+    /* Primary Heading Typography using Estilo Pro */
     .font-estilo { 
-      font-family: 'Cinzel', serif; 
+      font-family: 'Estilo Pro', 'Cinzel', Trajan, 'Times New Roman', serif; 
       letter-spacing: 0.15em;
       text-transform: uppercase;
     }
+
     .no-scrollbar::-webkit-scrollbar { display: none; }
     .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
@@ -44,7 +69,6 @@
 </head>
 <body class="bg-stone-50 text-neutral-900 bg-canvas-texture dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-setting-plaster selection:text-neutral-950">
 
-  <!-- Header Navigation -->
   <header class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800/80 transition-colors">
     <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
       
@@ -79,12 +103,10 @@
     </div>
   </header>
 
-  <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
     <div class="absolute inset-0 bg-gradient-to-t from-stone-50 via-stone-50/70 to-transparent dark:from-neutral-950 dark:via-neutral-950/70 dark:to-neutral-950/40 z-10"></div>
     <img src="assets/images/key arts/drawing-home-landscape.webp" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-25" loading="eager">
     
-    <!-- Watermark Camera Crest -->
     <div class="absolute z-10 opacity-10 dark:opacity-15 pointer-events-none flex items-center justify-center">
       <img src="assets/images/logos/MYRA Camera Only.png" alt="MYRA Crest" class="w-72 md:w-96 h-auto dark:invert" loading="eager">
     </div>
@@ -103,7 +125,6 @@
     </div>
   </section>
 
-  <!-- Featured Filmography Carousel -->
   <section id="films" class="py-24 max-w-7xl mx-auto px-6">
     <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
       <div>
@@ -121,10 +142,8 @@
       </div>
     </div>
 
-    <!-- Carousel Track -->
     <div id="carouselTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth pb-8">
       
-      <!-- Card 1: Freud's Last Session -->
       <div onclick="openModal('freuds-last-session')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/freuds-last-session.webp" loading="lazy" alt="Freud's Last Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -137,7 +156,6 @@
         </div>
       </div>
 
-      <!-- Card 2: Call Me By Your Name -->
       <div onclick="openModal('call-me-by-your-name')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/CMBYN.webp" loading="lazy" alt="Call Me By Your Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -150,7 +168,6 @@
         </div>
       </div>
 
-      <!-- Card 3: The World to Come -->
       <div onclick="openModal('the-world-to-come')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/twtc.webp" loading="lazy" alt="The World to Come" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -163,7 +180,6 @@
         </div>
       </div>
 
-      <!-- Card 4: Change in the Air -->
       <div onclick="openModal('change-in-the-air')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/change-in-the-air.webp" loading="lazy" alt="Change in the Air" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -176,7 +192,6 @@
         </div>
       </div>
 
-      <!-- Card 5: Drawing Home -->
       <div onclick="openModal('drawing-home')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/drawing-home.webp" loading="lazy" alt="Drawing Home" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -189,7 +204,6 @@
         </div>
       </div>
 
-      <!-- Card 6: Le Pardon -->
       <div onclick="openModal('le-pardon')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
           <img src="assets/images/key arts/le-pardon.webp" loading="lazy" alt="Le Pardon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
@@ -205,7 +219,6 @@
     </div>
   </section>
 
-  <!-- Mission Section -->
   <section id="mission" class="py-24 bg-stone-100/80 dark:bg-neutral-900/40 border-y border-neutral-200 dark:border-neutral-800">
     <div class="max-w-7xl mx-auto px-6">
       <div class="max-w-2xl mb-16">
@@ -234,8 +247,7 @@
     </div>
   </section>
 
-  <!-- Initiatives Section with Balanced Watermark Cropping -->
-<section id="initiatives" class="py-24 max-w-7xl mx-auto px-6">
+  <section id="initiatives" class="py-24 max-w-7xl mx-auto px-6">
     <div class="max-w-2xl mb-16">
       <h2 class="text-xs font-estilo text-red-earth dark:text-setting-plaster mb-2 tracking-[0.25em] font-semibold">Philanthropy & Grants</h2>
       <h3 class="font-estilo text-3xl md:text-4xl text-neutral-900 dark:text-neutral-100">M.Y.R.A. Initiatives</h3>
@@ -251,7 +263,7 @@
         <div class="relative z-10">
           <span class="text-xs font-estilo text-red-earth tracking-widest block mb-2 font-semibold">Philanthropic Division</span>
           <h4 class="font-estilo text-2xl mb-4 text-neutral-900 dark:text-neutral-100">The M.Y.R.A. Initiative</h4>
-          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
+          <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed">
             Supporting children's welfare and environmental conservation while advocating for nonviolent storytelling in media. Includes emergency relief funds and cultural outreach.
           </p>
         </div>
@@ -268,17 +280,15 @@
           <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
             Inviting filmmakers to showcase real-life stories that preserve cultural legacies, fuel cross-cultural knowledge, and promote environmental stewardship.
           </p>
+          <span class="text-xs font-estilo text-neutral-500 uppercase tracking-widest block">
+            Submissions by Invitation Only
+          </span>
         </div>
-        
-        <span class="relative z-10 text-xs font-estilo text-neutral-500 uppercase tracking-widest block border-t border-neutral-200 dark:border-neutral-800 pt-4">
-          Submissions by Invitation Only
-        </span>
       </div>
 
     </div>
   </section>
 
-  <!-- Leadership Section -->
   <section id="about" class="py-24 bg-stone-100/80 dark:bg-neutral-900/40 border-t border-neutral-200 dark:border-neutral-800">
     <div class="max-w-5xl mx-auto px-6">
       <div class="border border-neutral-200 dark:border-neutral-800 p-8 md:p-12 bg-white/90 dark:bg-neutral-950 shadow-sm dark:shadow-none">
@@ -304,7 +314,6 @@
     </div>
   </section>
 
-  <!-- Project Overlay Modal -->
   <div id="projectModal" class="fixed inset-0 z-50 hidden bg-neutral-950/80 backdrop-blur-lg flex items-center justify-center p-4 md:p-6 overflow-y-auto">
     <div class="max-w-3xl w-full bg-neutral-950/85 border border-neutral-800/80 p-6 md:p-10 relative rounded-sm my-auto shadow-2xl overflow-hidden backdrop-blur-md text-white">
       
@@ -338,7 +347,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
   <footer class="py-12 border-t border-neutral-200 dark:border-neutral-800 text-xs text-neutral-500 font-light">
     <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
       <p class="font-estilo tracking-wider">&copy; 2026 M.Y.R.A. Entertainment, LLC. All rights reserved.</p>
@@ -371,6 +379,7 @@
       document.getElementById('themeToggleText').innerText = 'LIGHT MODE';
     }
 
+    // Project Data Dictionary with Landscape Overrides
     const projectData = {
       'freuds-last-session': {
         title: "Freud's Last Session",
@@ -379,7 +388,8 @@
         synopsis: "On the eve of WWII, psychoanalyst Sigmund Freud and author C.S. Lewis engage in a monumental debate over the existence of God, faith, and human consciousness.",
         credits: "Anthony Hopkins, Matthew Goode | Dir. Matt Brown",
         role: "Executive Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/freuds-last-session.webp"
+        keyArt: "assets/images/key arts/freuds-last-session.webp",
+        landscapeArt: "assets/images/key arts/freuds-last-session surrealjpg.webp" // Falls back to keyArt if not specified
       },
       'call-me-by-your-name': {
         title: "Call Me By Your Name",
@@ -415,7 +425,8 @@
         synopsis: "In the 1920s, a young East Coast debutante falls in love with a painter and abandons her lavish life to move to the Canadian Rockies.",
         credits: "Julie Lynn Mortensen, Juan Riedinger, Kate Mulgrew | Dir. Markus Rupprecht",
         role: "Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/drawing-home.webp"
+        keyArt: "assets/images/key arts/drawing-home.webp",
+        landscapeArt: "assets/images/key arts/drawing-home-landscape.webp" // Landscape override
       },
       'le-pardon': {
         title: "Le Pardon",
@@ -424,7 +435,8 @@
         synopsis: "A poetic examination of grace, forgiveness, and cross-cultural human connection.",
         credits: "Dir. Margarethe Baillou",
         role: "Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/le-pardon.webp"
+        keyArt: "assets/images/key arts/le-pardon.webp",
+        landscapeArt: "assets/images/key arts/le-pardon-landscape.webp" // Landscape override
       }
     };
 
@@ -439,7 +451,9 @@
       document.getElementById('modalCredits').innerText = data.credits;
       document.getElementById('modalRole').innerText = data.role;
       
-      document.getElementById('modalBgArt').style.backgroundImage = `url('${data.keyArt}')`;
+      // Use landscapeArt if available; otherwise default to keyArt
+      const bgImage = data.landscapeArt || data.keyArt;
+      document.getElementById('modalBgArt').style.backgroundImage = `url('${bgImage}')`;
 
       document.getElementById('projectModal').classList.remove('hidden');
       document.body.style.overflow = 'hidden';
