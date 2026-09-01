@@ -4,6 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>M.Y.R.A. Entertainment | Responsible Storytelling</title>
+  
+  <!-- Font CDN Preconnect for Faster Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -18,7 +24,6 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Plus Jakarta Sans', sans-serif; transition: background-color 0.3s ease, color 0.3s ease; }
     .font-estilo { 
@@ -39,12 +44,12 @@
 </head>
 <body class="bg-stone-50 text-neutral-900 bg-canvas-texture dark:bg-neutral-950 dark:text-neutral-100 antialiased selection:bg-setting-plaster selection:text-neutral-950">
 
-  <!-- Header Navigation with Main Logo -->
+  <!-- Header Navigation -->
   <header class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-neutral-950/90 backdrop-blur-md border-b border-neutral-200 dark:border-neutral-800/80 transition-colors">
     <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
       
       <a href="#" class="flex items-center space-x-3">
-        <img src="assets/images/logos/MYRA Entertainment.png" alt="M.Y.R.A. Entertainment Logo" class="h-10 md:h-12 w-auto object-contain dark:invert">
+        <img src="assets/images/logos/MYRA Entertainment.png" alt="M.Y.R.A. Logo" class="h-10 md:h-12 w-auto object-contain dark:invert">
         <div class="flex flex-col">
           <span class="font-estilo text-lg md:text-xl font-semibold tracking-[0.25em] text-neutral-900 dark:text-neutral-100 leading-tight">
             M.Y.R.A. ENTERTAINMENT
@@ -74,14 +79,14 @@
     </div>
   </header>
 
-  <!-- Hero Section with Camera Logo Crest Backdrop -->
+  <!-- Hero Section -->
   <section class="relative h-screen flex items-center justify-center overflow-hidden pt-20">
     <div class="absolute inset-0 bg-gradient-to-t from-stone-50 via-stone-50/70 to-transparent dark:from-neutral-950 dark:via-neutral-950/70 dark:to-neutral-950/40 z-10"></div>
-    <img src="assets/images/key arts/drawing-home-landscape.jpg" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-25">
+    <img src="assets/images/key arts/drawing-home-landscape.webp" alt="Hero Background" class="absolute inset-0 w-full h-full object-cover opacity-30 dark:opacity-25" loading="eager">
     
-    <!-- Watermark Camera Logo -->
+    <!-- Watermark Camera Crest -->
     <div class="absolute z-10 opacity-10 dark:opacity-15 pointer-events-none flex items-center justify-center">
-      <img src="assets/images/logos/MYRA Camera Only.png" alt="MYRA Crest" class="w-72 md:w-96 h-auto dark:invert">
+      <img src="assets/images/logos/MYRA Camera Only.png" alt="MYRA Crest" class="w-72 md:w-96 h-auto dark:invert" loading="eager">
     </div>
 
     <div class="relative z-20 max-w-5xl mx-auto text-center px-6">
@@ -119,9 +124,10 @@
     <!-- Carousel Track -->
     <div id="carouselTrack" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth pb-8">
       
+      <!-- Card 1: Freud's Last Session -->
       <div onclick="openModal('freuds-last-session')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
-          <img src="assets/images/key arts/freuds-last-session.jpg" alt="Freud's Last Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <img src="assets/images/key arts/freuds-last-session.webp" loading="lazy" alt="Freud's Last Session" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
         <div class="p-6">
           <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Feature Narrative</span>
@@ -131,9 +137,10 @@
         </div>
       </div>
 
+      <!-- Card 2: Call Me By Your Name -->
       <div onclick="openModal('call-me-by-your-name')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
-          <img src="assets/images/key arts/CMBYN.jpg" alt="Call Me By Your Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <img src="assets/images/key arts/CMBYN.webp" loading="lazy" alt="Call Me By Your Name" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
         <div class="p-6">
           <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Academy Award Winner</span>
@@ -143,9 +150,10 @@
         </div>
       </div>
 
+      <!-- Card 3: The World to Come -->
       <div onclick="openModal('the-world-to-come')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
-          <img src="assets/images/key arts/twtc.jpeg" alt="The World to Come" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <img src="assets/images/key arts/twtc.webp" loading="lazy" alt="The World to Come" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
         <div class="p-6">
           <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Venice Winner</span>
@@ -155,14 +163,41 @@
         </div>
       </div>
 
+      <!-- Card 4: Change in the Air -->
       <div onclick="openModal('change-in-the-air')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
         <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
-          <img src="assets/images/key arts/change-in-the-air.jpg" alt="Change in the Air" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+          <img src="assets/images/key arts/change-in-the-air.webp" loading="lazy" alt="Change in the Air" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
         </div>
         <div class="p-6">
           <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Feature Narrative</span>
           <h4 class="font-estilo text-xl text-neutral-900 dark:text-neutral-100">Change in the Air</h4>
           <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-1">Executive Produced by M.Y.R.A.</p>
+          <span class="text-[10px] font-estilo text-red-earth tracking-widest mt-4 block group-hover:underline transition-colors">View Details &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Card 5: Drawing Home -->
+      <div onclick="openModal('drawing-home')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
+        <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
+          <img src="assets/images/key arts/drawing-home.webp" loading="lazy" alt="Drawing Home" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+        </div>
+        <div class="p-6">
+          <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Biographical Drama</span>
+          <h4 class="font-estilo text-xl text-neutral-900 dark:text-neutral-100">Drawing Home</h4>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-1">Produced by M.Y.R.A.</p>
+          <span class="text-[10px] font-estilo text-red-earth tracking-widest mt-4 block group-hover:underline transition-colors">View Details &rarr;</span>
+        </div>
+      </div>
+
+      <!-- Card 6: Le Pardon -->
+      <div onclick="openModal('le-pardon')" class="snap-start shrink-0 w-[280px] sm:w-[320px] md:w-[350px] cursor-pointer group relative bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 rounded-sm hover:border-red-earth/50 transition-all duration-300 flex flex-col justify-between hover:-translate-y-1 shadow-sm dark:shadow-none">
+        <div class="aspect-[2/3] bg-neutral-100 dark:bg-neutral-950 overflow-hidden relative">
+          <img src="assets/images/key arts/le-pardon.webp" loading="lazy" alt="Le Pardon" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90">
+        </div>
+        <div class="p-6">
+          <span class="text-[10px] text-red-earth dark:text-setting-plaster font-estilo tracking-widest block mb-1 font-semibold">Short Film</span>
+          <h4 class="font-estilo text-xl text-neutral-900 dark:text-neutral-100">Le Pardon</h4>
+          <p class="text-xs text-neutral-500 dark:text-neutral-400 font-light mt-1">Produced by M.Y.R.A.</p>
           <span class="text-[10px] font-estilo text-red-earth tracking-widest mt-4 block group-hover:underline transition-colors">View Details &rarr;</span>
         </div>
       </div>
@@ -199,8 +234,8 @@
     </div>
   </section>
 
-  <!-- Initiatives Section with Dedicated Division Logos -->
-  <section id="initiatives" class="py-24 max-w-7xl mx-auto px-6">
+  <!-- Initiatives Section with Balanced Watermark Cropping -->
+<section id="initiatives" class="py-24 max-w-7xl mx-auto px-6">
     <div class="max-w-2xl mb-16">
       <h2 class="text-xs font-estilo text-red-earth dark:text-setting-plaster mb-2 tracking-[0.25em] font-semibold">Philanthropy & Grants</h2>
       <h3 class="font-estilo text-3xl md:text-4xl text-neutral-900 dark:text-neutral-100">M.Y.R.A. Initiatives</h3>
@@ -208,10 +243,12 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       
-      <!-- The M.Y.R.A. Initiative Box -->
-      <div class="bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-sm shadow-sm dark:shadow-none flex flex-col justify-between">
-        <div>
-          <img src="assets/images/logos/MYRA Initiative 2026.png" alt="The M.Y.R.A. Initiative Logo" class="h-12 w-auto mb-6 dark:invert object-contain">
+      <div class="relative overflow-hidden bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-sm shadow-sm dark:shadow-none flex flex-col justify-between group">
+        <div class="absolute -right-6 -bottom-8 w-60 md:w-64 h-auto opacity-[0.09] dark:opacity-[0.14] pointer-events-none transition-all duration-500 group-hover:scale-105 group-hover:opacity-[0.14] dark:group-hover:opacity-[0.20]">
+          <img src="assets/images/logos/MYRA Initiative 2026.png" alt="Initiative Watermark" class="w-full h-auto object-contain dark:invert" loading="lazy">
+        </div>
+
+        <div class="relative z-10">
           <span class="text-xs font-estilo text-red-earth tracking-widest block mb-2 font-semibold">Philanthropic Division</span>
           <h4 class="font-estilo text-2xl mb-4 text-neutral-900 dark:text-neutral-100">The M.Y.R.A. Initiative</h4>
           <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
@@ -220,17 +257,22 @@
         </div>
       </div>
 
-      <!-- Documentary Film Fund Box -->
-      <div class="bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-sm shadow-sm dark:shadow-none flex flex-col justify-between">
-        <div>
-          <img src="assets/images/logos/MYRA Doc Fund.png" alt="M.Y.R.A. Documentary Fund Logo" class="h-12 w-auto mb-6 dark:invert object-contain">
+      <div class="relative overflow-hidden bg-white/90 dark:bg-neutral-900 border border-neutral-200 dark:border-neutral-800 p-8 rounded-sm shadow-sm dark:shadow-none flex flex-col justify-between group">
+        <div class="absolute -right-6 -bottom-8 w-60 md:w-64 h-auto opacity-[0.09] dark:opacity-[0.14] pointer-events-none transition-all duration-500 group-hover:scale-105 group-hover:opacity-[0.14] dark:group-hover:opacity-[0.20]">
+          <img src="assets/images/logos/MYRA Doc Fund Logo Image Only Final.png" alt="Doc Fund Watermark" class="w-full h-auto object-contain dark:invert" loading="lazy">
+        </div>
+
+        <div class="relative z-10">
           <span class="text-xs font-estilo text-red-earth tracking-widest block mb-2 font-semibold">Filmmaker Grant</span>
           <h4 class="font-estilo text-2xl mb-4 text-neutral-900 dark:text-neutral-100">Documentary Film Fund</h4>
           <p class="text-sm text-neutral-600 dark:text-neutral-400 font-light leading-relaxed mb-6">
             Inviting filmmakers to showcase real-life stories that preserve cultural legacies, fuel cross-cultural knowledge, and promote environmental stewardship.
           </p>
         </div>
-        <span class="text-xs font-estilo text-neutral-500 uppercase tracking-widest block border-t border-neutral-200 dark:border-neutral-800 pt-4">Submissions by Invitation Only</span>
+        
+        <span class="relative z-10 text-xs font-estilo text-neutral-500 uppercase tracking-widest block border-t border-neutral-200 dark:border-neutral-800 pt-4">
+          Submissions by Invitation Only
+        </span>
       </div>
 
     </div>
@@ -334,7 +376,7 @@
         synopsis: "On the eve of WWII, psychoanalyst Sigmund Freud and author C.S. Lewis engage in a monumental debate over the existence of God, faith, and human consciousness.",
         credits: "Anthony Hopkins, Matthew Goode | Dir. Matt Brown",
         role: "Executive Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/freuds-last-session.jpg"
+        keyArt: "assets/images/key arts/freuds-last-session.webp"
       },
       'call-me-by-your-name': {
         title: "Call Me By Your Name",
@@ -343,7 +385,7 @@
         synopsis: "In 1980s Italy, romance blossoms between a seventeen-year-old student and the older scholar hired as his father's research assistant.",
         credits: "Timothée Chalamet, Armie Hammer | Dir. Luca Guadagnino",
         role: "Executive Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/CMBYN.jpg"
+        keyArt: "assets/images/key arts/CMBYN.webp"
       },
       'the-world-to-come': {
         title: "The World to Come",
@@ -352,7 +394,7 @@
         synopsis: "In the mid-19th century American East Coast frontier, two neighboring couples struggle against isolation and hardships in a rugged landscape.",
         credits: "Katherine Waterston, Vanessa Kirby, Casey Affleck | Dir. Mona Fastvold",
         role: "Executive Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/twtc.jpeg"
+        keyArt: "assets/images/key arts/twtc.webp"
       },
       'change-in-the-air': {
         title: "Change in the Air",
@@ -361,7 +403,25 @@
         synopsis: "When a quiet young woman moves into a tight-knit neighborhood, her presence secretly affects the lives of those around her.",
         credits: "Rachel Brosnahan, Aidan Quinn, Mary Beth Hurt | Dir. Dianne Dreyer",
         role: "Executive Produced by M.Y.R.A. Entertainment",
-        keyArt: "assets/images/key arts/change-in-the-air.jpg"
+        keyArt: "assets/images/key arts/change-in-the-air.webp"
+      },
+      'drawing-home': {
+        title: "Drawing Home",
+        category: "Biographical Drama",
+        accolade: "Festival Favorite",
+        synopsis: "In the 1920s, a young East Coast debutante falls in love with a painter and abandons her lavish life to move to the Canadian Rockies.",
+        credits: "Julie Lynn Mortensen, Juan Riedinger, Kate Mulgrew | Dir. Markus Rupprecht",
+        role: "Produced by M.Y.R.A. Entertainment",
+        keyArt: "assets/images/key arts/drawing-home.webp"
+      },
+      'le-pardon': {
+        title: "Le Pardon",
+        category: "Short Film",
+        accolade: "Festival Selection",
+        synopsis: "A poetic examination of grace, forgiveness, and cross-cultural human connection.",
+        credits: "Dir. Margarethe Baillou",
+        role: "Produced by M.Y.R.A. Entertainment",
+        keyArt: "assets/images/key arts/le-pardon.webp"
       }
     };
 
